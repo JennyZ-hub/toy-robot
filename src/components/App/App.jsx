@@ -1,13 +1,15 @@
 import Header from "./components/Header";
 import Game from "./components/Game";
-import Commands from "./components/Commands";
+import styles from "./App.module.css";
 
 const App = () => (
-  <div>
-    App
-    <Header />
-    <Game />
-    <Commands />
+  <div className={styles.layout}>
+    <div className={styles.container}>
+      <Header />
+      <div>
+        <Game />
+      </div>
+    </div>
   </div>
 );
 

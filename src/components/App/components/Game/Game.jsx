@@ -1,12 +1,21 @@
 import Board from "./components/Board";
 import Robot from "./components/Robot";
 import Commands from "./components/Commands";
-import { createContext } from "react";
+import { useState } from "react";
 
-const GameContext = createContext();
-const [row, setRow] = useState(1);
-const [cell, setCell] = useState(1);
-const [face, setFace] = useState("N");
+function move() {
+  if (
+    (face === "N" && row === 5) ||
+    (face === "S" && row === 1) ||
+    (face === "E" && cell === 5) ||
+    (face === "W" && cell === 1)
+  )
+    return;
+  face === "N" && setRow(() => row + 1);
+  face === "S" && setRow(() => row - 1);
+  face === "E" && setCell(() => cell + 1),
+    face === "W" && setCell(() => cell + 1);
+}
 
 const Game = () => (
   <main className="m-12 flex justify-between">

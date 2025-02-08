@@ -1,2 +1,2 @@
-const Logo = () => <h1>Logo</h1>;
+const Logo = () => <h1>Toy Robot</h1>;
 export default Logo;

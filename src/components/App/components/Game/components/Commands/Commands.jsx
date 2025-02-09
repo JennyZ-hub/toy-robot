@@ -1,11 +1,11 @@
-import Button from "./components/Button";
+/*import Button from "./components/Button";*/
 import Display from "./components/Display";
 import Place from "./components/Place";
 import { useContext } from "react";
 import { AppContext } from "../../../../AppContext";
 
 function Commands() {
-  const commands = ["Move", "Left", "Right", "Report"];
+  /*const commands = ["Move", "Left", "Right"];*/
   const { row, cell, face, setRow, setCell, setFace } = useContext(AppContext);
   console.log(row, cell, face);
   function move() {
@@ -41,16 +41,13 @@ function Commands() {
     };
     setFace(turn[face]);
   }
-  function report() {
-    console.log("test");
-  }
 
-  const robotAction = {
+  /*const robotAction = {
     Move: move,
     Left: turnLeft,
     Right: turnRight,
     Report: report,
-  };
+  };*/
 
   return (
     <div className="space-y-8">
@@ -58,14 +55,34 @@ function Commands() {
         <Place />
       </div>
       <ul className="space-y-8">
-        {commands.map((command) => (
+        {/*commands.map((command) => (
           <li
             key={command}
             className="text-black-600 hover:cursor:pointer rounded-b-lg border-4 border-green-600 text-center hover:bg-green-600 hover:text-white"
           >
             <Button action={robotAction[command]}>{command}</Button>
           </li>
-        ))}
+        ))*/}
+        <div className="flex gap-7">
+          <button
+            className="text-black-600 hover:cursor:pointer rounded-b-lg border-4 border-green-600 text-center hover:bg-green-600 hover:text-white"
+            onClick={move}
+          >
+            Move
+          </button>
+          <button
+            className="text-black-600 hover:cursor:pointer rounded-b-lg border-4 border-green-600 text-center hover:bg-green-600 hover:text-white"
+            onClick={turnRight}
+          >
+            Right
+          </button>
+          <button
+            className="text-black-600 hover:cursor:pointer rounded-b-lg border-4 border-green-600 text-center hover:bg-green-600 hover:text-white"
+            onClick={turnLeft}
+          >
+            Left
+          </button>
+        </div>
       </ul>
       <Display />
     </div>

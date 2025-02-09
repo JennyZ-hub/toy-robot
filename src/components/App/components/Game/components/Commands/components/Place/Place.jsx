@@ -14,19 +14,39 @@ function Place() {
     <form onSubmit={placeRobot}>
       <div>
         <label htmlFor="row">Row</label>
-        <input type="text" id="row" name="row" />
+        <input
+          type="text"
+          id="row"
+          name="row"
+          placeholder="Please input 1-5"
+          className="m-[12px] border-[1px]"
+        />
       </div>
       <div>
         <label htmlFor="cell">Cell</label>
-        <input type="text" id="cell" name="cell" />
+        <input
+          type="text"
+          id="cell"
+          name="cell"
+          placeholder="Please input 1-5"
+          className="m-[12px] border-[1px]"
+        />
       </div>
       <div>
         <label htmlFor="face">Face</label>
-        <input type="text" id="face" name="face" />
+        <input
+          type="text"
+          id="face"
+          name="face"
+          placeholder="Please input N, E,S,W"
+          className="m-[12px] border-[1px]"
+        />
       </div>
-      <button className="text-black-600 hover:cursor:pointer rounded-b-lg border-4 border-green-600 text-center hover:bg-green-600 hover:text-white">
-        Place
-      </button>
+      <div className="justify:flex-end flex">
+        <button className="text-black-600 hover:cursor:pointer rounded-b-lg border-4 border-green-600 text-center hover:bg-green-600 hover:text-white">
+          Place
+        </button>
+      </div>
     </form>
   );
 }

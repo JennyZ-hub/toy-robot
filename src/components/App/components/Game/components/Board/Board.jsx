@@ -1,14 +1,18 @@
-/*import Row from "./components/row";*/
-import Cell from "./components/Row/components/cell";
+import Row from "./components/row";
 import Robot from "../Robot";
+//import { useContext } from "react";
+//import { AppContext } from "../../../../AppContext";
 
-const CELL_COUNT = 25;
-const Board = () => (
-  <div className="col-grid-rows-5 grid grid-cols-5 gap-x-[0] gap-y-[0] border border-gray-300 p-4">
-    {Array.from({ length: CELL_COUNT }).map((_, index) => (
-      <Cell key={index} />
-    ))}
-    <Robot />
-  </div>
-);
+function Board() {
+  const Row_COUNT = 5;
+  //const { row, cell, face } = useContext(AppContext);
+  return (
+    <div className="border border-gray-300 p-4">
+      {Array.from({ length: Row_COUNT }).map((_, index) => (
+        <Row key={index} rowId={index + 1} />
+      ))}
+      <Robot />
+    </div>
+  );
+}
 export default Board;

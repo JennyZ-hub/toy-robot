@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import Game from "./components/Game";
-import styles from "./App.module.css";
 import { useState } from "react";
 import { AppContext } from "./AppContext";
 
@@ -10,8 +9,8 @@ const App = () => {
   const [face, setFace] = useState("N");
   return (
     <AppContext.Provider value={{ row, cell, face, setRow, setCell, setFace }}>
-      <div className={styles.layout}>
-        <div className={styles.container}>
+      <div className="flex items-center justify-center">
+        <div className="h-[600px] w-[800px] p-[36px]">
           <Header />
           <div>
             <Game />

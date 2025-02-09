@@ -42,7 +42,7 @@ function Place() {
           className="m-[12px] border-[1px]"
         />
       </div>
-      <div className="justify:flex-end flex">
+      <div className="flex justify-end">
         <button className="text-black-600 hover:cursor:pointer rounded-b-lg border-4 border-green-600 text-center hover:bg-green-600 hover:text-white">
           Place
         </button>

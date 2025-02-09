@@ -1,10 +1,9 @@
 import Actions from "./components/Actions";
 import Logo from "./components/Logo";
-import styles from "./Header.module.css";
 
 const Header = () => (
-  <header className={styles.container}>
-    <div className={styles.layout}>
+  <header className="border-b-[2px] border-solid border-black pr-[16px] pl-[16px]">
+    <div className="flex items-center justify-between">
       <Logo />
       <Actions />
     </div>
